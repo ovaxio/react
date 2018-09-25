@@ -1,0 +1,59 @@
+@import (reference) 'styles/index';
+
+.list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.item {
+  display: flex;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+
+  a {
+    color: inherit;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    padding-top: 3px;
+    transition: @transition-default;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:global(.active) {
+      color: @primary;
+      border-bottom-color: @primary;
+    }
+
+  }
+}
+
+.homeItem {
+  .item;
+  line-height: 0;
+  a {
+    padding: 0;
+    border: none;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover,
+    &:global(.active) {
+      .logo {
+        filter: none;
+      }
+    }
+  }
+}
+
+.logo {
+  margin: 0 1em;
+  height: 120px;
+  filter: grayscale();
+  transition: @transition-default;
+}

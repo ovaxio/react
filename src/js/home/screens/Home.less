@@ -1,0 +1,54 @@
+@import (reference) 'styles/index';
+
+.root {
+  padding: 0 1em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media @mq-sm {
+    padding: 0 2em;
+  }
+
+  @media @mq-md {
+    max-width: 900px;
+    padding: 0;
+  }
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+
+  @media @mq-sm {
+    &:before,
+    &:after {
+      content: '★';
+      padding: .5em;
+    }
+  }
+}
+
+.ctaWrapper {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+.cta {
+  display: inline-block;
+  background: @primary;
+  border-radius: 3px;
+  padding: .5em 1.5em;
+  color: @white;
+  .txt-bold;
+  transition: @transition-default;
+
+  &:hover {
+    background: darken(@primary, 10%);
+  }
+}

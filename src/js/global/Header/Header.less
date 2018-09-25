@@ -1,0 +1,10 @@
+@import (reference) 'styles/index';
+
+.root {
+  position: fixed;
+  background-color: fadeout(@white, 5%);
+  color: @grey;
+  width: 100vw;
+  backdrop-filter: blur(12px); // only edge for now
+  z-index: 1;
+}

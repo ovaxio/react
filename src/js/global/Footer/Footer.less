@@ -1,0 +1,34 @@
+@import (reference) 'styles/index';
+
+
+.root {
+  max-width: 900px;
+  margin-top: 2em;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  flex-grow: 1;
+}
+
+.item {
+  height: 100%;
+  margin: 0 .3em;
+  display: flex;
+  align-items: center;
+
+  @media (hover) {
+    filter: grayscale();
+    transition: @transition-default;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.itemLogo {
+  max-height: 30px;
+}
